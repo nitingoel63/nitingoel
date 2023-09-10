@@ -279,13 +279,34 @@
             <div id="contact-container">
 
                 <div class="contact-box">
-                    <form id="contact-form">
+                    <form id="contact-form" onsubmit="sendEmail(); reset();return false;">
                         <input id="input-name" type="text" name="name" placeholder="Your Name">
                         <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
                         <textarea id="input-message" name="input-message" cols="40" rows="2" placeholder="Message"></textarea>
                         <button class="sub-btn" type="submit">SEND MESSAGE</button>
                     </form>
                 </div>
+                <script  scr="https://smtpjs.com/v3/smtp.js"></script>
+                <script>
+                    function sendEmail(){
+                        Email.send({
+                                Host : "smtp.gmail.com",
+                                Username : "nitingoel6397@gmail.com",
+                                Password : "Nitin@123",
+                                To : 'nitingoel7669@gmail.com',
+                                From : document.getElementById("email").value,
+                                Subject : "New contact for msg",
+                                Body : "Name: "+ document.getElementById("Name").value 
+                                    + "<br>" Email: "+ document.getElementById("email").value
+                            + "<br>" phone no: " document.getElementById("phone").value
+                            + "<br>" mesaage: " document.getElementById("message").value
+                            }).then(
+                              message => alert("message send")
+);
+
+                    }
+                </script>
+                
                 <div id="contact-details">
 
                     <h3> Get In Touch </h3>
