@@ -279,32 +279,42 @@
             <div id="contact-container">
 
                 <div class="contact-box">
-                    <form id="contact-form">
-                        <input id="input-name" type="text" name="name" placeholder="Your Name">
-                        <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
-                        <textarea id="input-message" name="input-message" cols="40" rows="2" placeholder="Message"></textarea>
-                        <button class="sub-btn" type="submit">SEND MESSAGE</button>
-                    </form>
-                </div>
-                <script  scr="https://smtpjs.com/v3/smtp.js"></script>
-                <script>
-                    function sendEmail(){
-                        Email.send({
-                                Host : "smtp.gmail.com",
-                                Username : "nitingoel6397@gmail.com",
-                                Password : "Nitin@123",
-                                To : 'nitingoel7669@gmail.com',
-                                From : document.getElementById("email").value,
-                                Subject : "New contact for msg",
-                                Body : "Your Name: "+ document.getElementById("Name").value 
-                                    + "<br>" Your Email: "+ document.getElementById("email").value
-                                    + "<br>" Message: " document.getElementById("message").value
-                            }).then(
-                              message => alert("Message send")
-                             );
+ <form>
+      <h1>Send Data To WhatsApp</h1>
+      <label for="">Name</label>
+      <input type="text" class="name">
 
-                    }
-                </script>
+      <label for="">Email</label>
+      <input type="text" class="email">
+
+      <label for="">Country</label>
+      <input type="text" class="country">
+
+      <label for="">Message</label>
+      <textarea class="message"></textarea>
+      <button type="button" onclick="sendwhatsapp();">Send Via WhatsApp</button>
+    </form>
+
+    <script>
+      function sendwhatsapp(){
+       var phonenumber = "+916397888547";
+
+       var name = document.querySelector(".name").value;
+       var email = document.querySelector(".email").value;
+       var country = document.querySelector(".country").value;
+       var message = document.querySelector(".message").value;
+
+       var url = "https://wa.me/" + phonenumber + "?text="
+       +"*Name :* "+name+"%0a"
+       +"*Email :* "+email+"%0a"
+       +"*Country:* "+country+"%0a"
+       +"*Message :* "+message
+       +"%0a%0a"
+       +"This is an example of send HTML form data to WhatsApp";
+
+       window.open(url, '_blank').focus();
+     }
+    </script>
                 
                 <div id="contact-details">
 
