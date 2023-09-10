@@ -279,7 +279,7 @@
             <div id="contact-container">
 
                 <div class="contact-box">
-                    <form id="contact-form" onsubmit="sendEmail(); reset();return false;">
+                    <form onsubmit="sendEmail(); reset();return false;">
                         <input id="input-name" type="text" name="name" placeholder="Your Name">
                         <input id="input-email" name="input-email" type="text" required placeholder="Your Email">
                         <textarea id="input-message" name="input-message" cols="40" rows="2" placeholder="Message"></textarea>
@@ -296,13 +296,12 @@
                                 To : 'nitingoel7669@gmail.com',
                                 From : document.getElementById("email").value,
                                 Subject : "New contact for msg",
-                                Body : "Name: "+ document.getElementById("Name").value 
-                                    + "<br>" Email: "+ document.getElementById("email").value
-                            + "<br>" phone no: " document.getElementById("phone").value
-                            + "<br>" mesaage: " document.getElementById("message").value
+                                Body : "Your Name: "+ document.getElementById("Name").value 
+                                    + "<br>" Your Email: "+ document.getElementById("email").value
+                                    + "<br>" Message: " document.getElementById("message").value
                             }).then(
-                              message => alert("message send")
-);
+                              message => alert("Message send")
+                             );
 
                     }
                 </script>
