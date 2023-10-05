@@ -301,16 +301,16 @@
       function sendwhatsapp(){
        var phonenumber = "+916397888547";
 
-       var name = document.querySelector(".name").value;
-       var email = document.querySelector(".email").value;
-       var country = document.querySelector(".country").value;
-       var message = document.querySelector(".message").value;
+       var name = document.querySelector(".Name").value;
+       var email = document.querySelector(".Email").value;
+       var country = document.querySelector(".Subject").value;
+       var message = document.querySelector(".Message").value;
 
        var url = "https://wa.me/" + phonenumber + "?text="
-       +"*Name :* "+name+"%0a"
-       +"*Email :* "+email+"%0a"
-       +"*Country:* "+country+"%0a"
-       +"*Message :* "+message
+       +"*Name :* "+Name+"%0a"
+       +"*Email :* "+Email+"%0a"
+       +"*Subject:* "+Subject+"%0a"
+       +"*Message :* "+Message
        +"%0a%0a"
        +"Type your message.";
 
