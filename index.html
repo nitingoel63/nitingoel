@@ -280,6 +280,29 @@
 
                 <div class="contact-box">
 <style>
+    form{
+      margin: 5px 5px;
+      width: 300px;
+      font-size: 16px;
+    }
+    
+    form label{
+      display: block;
+      margin-bottom: 5px;
+    }
+    form input, form textarea{
+      width: 50%;
+      padding: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    form button{
+      background: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 5px;  
+    }
     form button:hover{
       background: green;
     }
@@ -287,20 +310,19 @@
     <form>
 
       <label for="">Name</label>
-      <input type="text" class="name"><br>
+      <input type="text" class="name">
 
       <label for="">Email</label>
-      <input type="text" class="email"><br>
+      <input type="text" class="email">
 
       <label for="">subject</label>
-      <input type="text" class="subject"><br>
+      <input type="text" class="subject">
 
-      <label for="">Message</label><br>
-      <textarea class="message"></textarea><br>
+      <label for="">Message</label>
+      <textarea class="message"></textarea>
       <button type="button" onclick="sendwhatsapp();">Send Via WhatsApp</button>
     </form>
-
-    <script>
+<script>
       function sendwhatsapp(){
        var phonenumber = "+916397888547";
 
