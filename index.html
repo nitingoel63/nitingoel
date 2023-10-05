@@ -286,16 +286,16 @@
   </style>
     <form>
 
-      <label for="">Name</label>
+      <label for="">Name</label><br>
       <input type="text" class="name">
 
-      <label for="">Email</label>
+      <label for="">Email</label><br>
       <input type="text" class="email">
 
-      <label for="">Country</label>
-      <input type="text" class="country">
+      <label for="">subject</label><br>
+      <input type="text" class="subject">
 
-      <label for="">Message</label>
+      <label for="">Message</label><br>
       <textarea class="message"></textarea>
       <button type="button" onclick="sendwhatsapp();">Send Via WhatsApp</button>
     </form>
@@ -306,13 +306,13 @@
 
        var name = document.querySelector(".name").value;
        var email = document.querySelector(".email").value;
-       var country = document.querySelector(".country").value;
+       var country = document.querySelector(".subject").value;
        var message = document.querySelector(".message").value;
 
        var url = "https://wa.me/" + phonenumber + "?text="
        +"*Name :* "+name+"%0a"
        +"*Email :* "+email+"%0a"
-       +"*Country:* "+country+"%0a"
+       +"*subject:* "+subject+"%0a"
        +"*Message :* "+message
        +"%0a%0a"
        +"Type your message.";
